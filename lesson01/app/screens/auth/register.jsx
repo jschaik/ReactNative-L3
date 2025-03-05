@@ -1,12 +1,20 @@
-import { View, Text, Button } from "react-native";
+import { StyleSheet, Text, View, Button } from 'react-native'
 import { useRouter } from "expo-router";
 
-export default function RegisterScreen() {
-  const router = useRouter();
+export default function Register() {
+
+  const router = useRouter()
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontSize: 24 }}>📝 Registreren</Text>
-      <Button title="Terug" onPress={() => router.back()} />
+    <View style={styles.container}>
+      <Text>Registreren</Text>
+      <Button title='terug' onPress={() => router.back()}/>
     </View>
-  );
+  )
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  }
+})

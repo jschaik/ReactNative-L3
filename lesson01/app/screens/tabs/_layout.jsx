@@ -1,21 +1,34 @@
-import { Tabs } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from '@expo/vector-icons';
+import { Tabs } from 'expo-router';
 
 export default function TabsLayout() {
   return (
     <Tabs
-      screenOptions={({ route }) => ({
+      screenOptions={{
         headerShown: false,
-        tabBarIcon: ({ color, size }) => {
-          let iconName;
-          if (route.name === "home") iconName = "home-outline";
-          else if (route.name === "profile") iconName = "person-outline";
-          return <Ionicons name={iconName} size={size} color={color} />;
+        tabBarLabel: () => null,
+        tabBarStyle: {
+          height: 80,
+          paddingBottom: 5,
+          paddingTop: 10,
         },
-      })}
+      }}
     >
-      <Tabs.Screen name="home" options={{ title: "Home" }} />
-      <Tabs.Screen name="profile" options={{ title: "Profiel" }} />
+      <Tabs.Screen
+        name='home'
+        options={{
+          title: 'Home',
+          tabBarIcon: () => <Ionicons name='home-outline' size='24' />,
+        }}
+      />
+
+      <Tabs.Screen
+        name='profile'
+        options={{
+          title: 'Profile',
+          tabBarIcon: () => <Ionicons name='person-outline' size='24' />,
+        }}
+      />
     </Tabs>
   );
 }
