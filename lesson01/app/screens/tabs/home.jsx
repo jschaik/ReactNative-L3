@@ -1,4 +1,12 @@
-import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Link } from 'expo-router';
+import {
+  FlatList,
+  Pressable,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
 const DATA = [
   { id: 1, title: 'Barcelona', description: 'Zon, strand en Gaudí' },
@@ -14,10 +22,12 @@ export default function HomeScreen() {
           data={DATA}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => (
-            <View style={styles.card}>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.description}>{item.description}</Text>
-            </View>
+            <Link href={`/screens/detailScreen?id=${item.id}`} asChild>
+              <Pressable style={styles.card}>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.description}>{item.description}</Text>
+              </Pressable>
+            </Link>
           )}
         />
       </View>
@@ -28,14 +38,14 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#f2f2f2', // zachte achtergrondkleur
+    backgroundColor: '#f2f2f2',
   },
   container: {
     flex: 1,
     padding: 10,
   },
   card: {
-    backgroundColor: '#e0e0e0', // lichtgrijs
+    backgroundColor: '#e0e0e0',
     padding: 20,
     marginVertical: 8,
     borderRadius: 8,
@@ -44,6 +54,9 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowRadius: 3,
     elevation: 2,
+  },
+  pressedCard: {
+    backgroundColor: '#cccccc',
   },
   title: {
     fontSize: 18,
