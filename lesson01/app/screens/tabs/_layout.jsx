@@ -18,7 +18,14 @@ export default function TabsLayout() {
         name='home'
         options={{
           title: 'Home',
-          tabBarIcon: () => <Ionicons name='home-outline' size='24' />,
+          tabBarIcon: () => <Ionicons name='home-outline' size={24} />,
+        }}
+      />
+      <Tabs.Screen
+        name='addTrips'
+        options={{
+          title: 'Add',
+          tabBarIcon: () => <Ionicons name='add-outline' size={24} />,
         }}
       />
 
@@ -26,7 +33,7 @@ export default function TabsLayout() {
         name='profile'
         options={{
           title: 'Profile',
-          tabBarIcon: () => <Ionicons name='person-outline' size='24' />,
+          tabBarIcon: () => <Ionicons name='person-outline' size={24} />,
         }}
       />
     </Tabs>
