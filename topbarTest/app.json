@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "lesson01",
-    "slug": "lesson01",
+    "name": "topbarTest",
+    "slug": "topbarTest",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/splash.png",
@@ -19,18 +19,17 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/splash.png"
+      "output": "static"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash.png",
+          "image": "./assets/images",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#000000"
+          "backgroundColor": "#ffffff"
         }
       ]
     ],

@@ -1,5 +1,5 @@
 {
-  "name": "lesson01",
+  "name": "topbartest",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
@@ -17,8 +17,6 @@
   "dependencies": {
     "@expo/ngrok": "^4.1.0",
     "@expo/vector-icons": "^14.0.2",
-    "@react-native-async-storage/async-storage": "1.23.1",
-    "@react-native-picker/picker": "2.9.0",
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
     "expo": "~52.0.41",
@@ -26,7 +24,6 @@
     "expo-constants": "~17.0.8",
     "expo-font": "~13.0.4",
     "expo-haptics": "~14.0.1",
-    "expo-image-picker": "~16.0.6",
     "expo-linking": "~7.0.5",
     "expo-router": "~4.0.19",
     "expo-splash-screen": "~0.29.22",
